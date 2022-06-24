@@ -1,5 +1,5 @@
 {
-  "name": "reactnativemultipleenvironmentsetup",
+  "name": "project",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -7,7 +7,17 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "android:staging": "react-native run-android --variant=stagingdebug",
+    "android:staging-release": "react-native run-android --variant=stagingrelease",
+    "android:dev": "npx react-native run-android --variant=developmentdebug --appIdSuffix development",
+    "android:dev-release": "npx react-native run-android --variant=developmentrelease --appIdSuffix development",
+    "android:dev-release-aab": "cd android && ./gradlew bundleDevelopmentRelease",
+    "android:dev-release-apk": "cd android && ./gradlew assembleDevelopmentRelease",
+    "android:prod": "npx react-native run-android --variant=productiondebug",
+    "android:prod-release": "npx react-native run-android --variant=productionrelease",
+    "android:prod-release-aab": "cd android && ./gradlew bundleProductionRelease",
+    "android:prod-release-apk": "cd android && ./gradlew assembleProductionRelease"
   },
   "dependencies": {
     "react": "17.0.2",
